@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MarketBrandonSamuel.cpp">
+    <ClCompile Include="MarketBrandonSamuelNicolasSory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Warehouse.cpp">
@@ -24,12 +24,18 @@
     <ClCompile Include="Item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warehouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Catalog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
