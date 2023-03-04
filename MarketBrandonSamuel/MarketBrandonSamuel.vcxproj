@@ -24,7 +24,7 @@
     <ProjectGuid>{a20da484-3e0b-4f60-9abd-13698f4e3e09}</ProjectGuid>
     <RootNamespace>MarketBrandonSamuel</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>MarketBrandonSamuelNicolasSory</ProjectName>
+    <ProjectName>MarketBrandonSamuelNicolas</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,12 +129,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Catalog.cpp" />
+    <ClCompile Include="ErrorManager.cpp" />
+    <ClCompile Include="OutputManager.cpp" />
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="Item.cpp" />
-    <ClCompile Include="MarketBrandonSamuelNicolasSory.cpp" />
+    <ClCompile Include="MarketBrandonSamuelNicolas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catalog.h" />
+    <ClInclude Include="ErrorManager.h" />
+    <ClInclude Include="OutputManager.h" />
     <ClInclude Include="Warehouse.h" />
     <ClInclude Include="Item.h" />
   </ItemGroup>

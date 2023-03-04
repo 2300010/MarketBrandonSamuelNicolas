@@ -1,11 +1,24 @@
 #include <iostream>
 #include "Warehouse.h"
+#include "ErrorManager.h"
+#include "OutputManager.h"
 
 int main()
 {
     Warehouse myWarehouse;
+    ErrorManager myErrorManager;
 
     Item myItem("Banana", 30);
+
+    int nbrBananas = 0;
+
+    cout << "Please select the number of bananas you want to buy: ";
+
+    nbrBananas >> myErrorManager.IntInputValidator(cin);
+
+    cout << "\nYou bought " << nbrBananas << " bananas.\n";
+
+    system("Pause");
 
     for (int i = 0; i < 8; i++)
     {

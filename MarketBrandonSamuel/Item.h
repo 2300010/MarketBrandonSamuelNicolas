@@ -23,19 +23,15 @@ public:
 
 	//Declare Getter-Setter signatures
 	string Get_Name();
-
 	void Set_Name(string name);
 
 	int Get_Cost();
-
 	void Set_Cost(int cost);
 
 	int Get_Amount_Bought();
-
 	void Set_Amount_Bought(int amountBought);
 
 	int Get_Amount_Sold();
-
 	void Set_Amount_Sold(int amountSold);
 
 };

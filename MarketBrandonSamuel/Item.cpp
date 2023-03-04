@@ -3,42 +3,98 @@
 //Declare definition of Getter-Setter
 string Item::Get_Name()
 {
-	return name;
+	try
+	{
+		return name;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 void Item::Set_Name(string name)
 {
-	this->name = name;
+	try
+	{
+		this->name = name;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 int Item::Get_Cost()
 {
-	return cost;
+	try
+	{
+		return cost;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 void Item::Set_Cost(int cost)
 {
-	this->cost = cost;
+	try
+	{
+		this->cost = cost;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 int Item::Get_Amount_Bought()
 {
-	return totalAmountBought;
+	try
+	{
+		return totalAmountBought;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 void Item::Set_Amount_Bought(int amountBought)
 {
-	int tempAmount = totalAmountBought + amountBought;
+	try
+	{
+		int tempAmount = totalAmountBought + amountBought;
 
-	this->totalAmountBought = tempAmount;
+		this->totalAmountBought = tempAmount;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 int Item::Get_Amount_Sold()
 {
-	return totalAmountSold;
+	try
+	{
+		return totalAmountSold;
+	}
+	catch (...)
+	{
+
+	}
 }
 
 void Item::Set_Amount_Sold(int amountSold)
 {
-	this->totalAmountSold += amountSold;
+	try
+	{
+		this->totalAmountSold += amountSold;
+	}
+	catch (...)
+	{
+
+	}
 }

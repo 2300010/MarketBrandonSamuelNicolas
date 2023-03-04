@@ -21,6 +21,7 @@ public:
 	//Declare method signature to get items inventory and sales
 	int Get_Item_Bought(Item itemName);
 	int Get_Item_Sales(Item itemName);
+
 	int Get_Total_Items_Bought();
 	int Get_Total_Items_Sold();
 };

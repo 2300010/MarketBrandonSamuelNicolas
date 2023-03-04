@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MarketBrandonSamuelNicolasSory.cpp">
+    <ClCompile Include="MarketBrandonSamuelNicolas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Warehouse.cpp">
@@ -27,6 +27,12 @@
     <ClCompile Include="Catalog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ErrorManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warehouse.h">
@@ -36,6 +42,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Catalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
