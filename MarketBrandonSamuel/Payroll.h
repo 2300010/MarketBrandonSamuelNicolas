@@ -4,12 +4,11 @@
     class Payroll 
     {
     public:
-        // Constructor
-        Payroll();
-
-        // Pays employees and updates total amount paid
-        void payEmployees();
-
-        // Returns the total amount paid to employees
-        void getTotalPaid();
+        Payroll(); // constructor
+        void setMinutesPassed(int minutes); // setter for minutes passed
+        int getMinutesPassed(); // getter for minutes passed
+        int calculatePayment(); // calculate payment based on minutes passed
+    private:
+        int minutesPassed; // number of minutes passed
+        int totalPayment; // total payment to employees
     };

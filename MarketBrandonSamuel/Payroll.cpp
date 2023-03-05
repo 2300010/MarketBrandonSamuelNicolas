@@ -1,13 +1,31 @@
 #include "Payroll.h"
 
-// Pays employees and updates total amount paid
-void Payroll::payEmployees() 
+using namespace std;
+
+// constructor initializes minutesPassed and totalPayment to 0
+Payroll::Payroll()
 {
-    
+    minutesPassed = 0;
+    totalPayment = 0;
 }
 
-// Returns the total amount paid to employees
-void Payroll::getTotalPaid()
+// setter for minutesPassed
+void Payroll::setMinutesPassed(int minutes)
 {
-    
+    minutesPassed = minutes;
 }
+
+// getter for minutesPassed
+int Payroll::getMinutesPassed() 
+{
+    return minutesPassed;
+}
+
+// calculate payment based on minutes passed
+int Payroll::calculatePayment() 
+{
+    int payment = minutesPassed * 2600;
+    totalPayment += payment; // add payment to totalPayment
+    return payment;
+}
+

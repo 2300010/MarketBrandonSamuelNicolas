@@ -154,3 +154,16 @@ void UiManager::DisplayActualData()
 
 	}
 }
+
+//Function to ask minutes passed
+void UiManager::AskMinutesPassed()
+{
+	try 
+	{
+
+	}
+	catch (...)
+	{
+
+	}
+}

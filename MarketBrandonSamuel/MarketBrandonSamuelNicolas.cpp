@@ -33,14 +33,12 @@ int main()
 				{
 				case 1: //Sell inventory
 				{
-					myUiManager.PrintSellInventoryMenu(myWarehouse.itemInventory);
-					myUiManager.AskSellerQuantity(myWarehouse.itemInventory, 1);
+					
 				}
 				break;
 				case 2: //Buy inventory
 				{
-					myUiManager.PrintCatalogList(itemCatalog);
-					myUiManager.AskBuyerQuantity(itemCatalog, 2);
+					
 				}
 				break;
 				case 3: //Display data
@@ -50,6 +48,7 @@ int main()
 				break;
 				case 4: //Pay employees
 				{
+
 				}
 				break;
 				case 0:

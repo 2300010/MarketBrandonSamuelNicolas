@@ -36,6 +36,9 @@ public:
 	//Displays actual warehouse data
 	void DisplayActualData();
 
+	//Asks minutes for employee payment
+	void AskMinutesPassed();
+
 
 };
 
