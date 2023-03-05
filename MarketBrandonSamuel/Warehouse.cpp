@@ -19,7 +19,6 @@ void Warehouse::Add_To_Inventory(Item newItem, int amount)
 	}
 }
 
-
 //Declare method definition to add catalog to buy inventory warehouse
 void Warehouse::Add_Catalog(vector<Item> catalog)
 {

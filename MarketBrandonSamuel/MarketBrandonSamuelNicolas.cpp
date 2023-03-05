@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Warehouse.h"
 #include "ErrorManager.h"
 #include "UiManager.h"
@@ -10,12 +9,12 @@ int main()
 	UiManager myUiManager;
 
     // Hard coding 6 different catalog items and adding them to Warehouse
-    Item CATALOG_ITEM_1("Apple", 7);
-    Item CATALOG_ITEM_2("Pineapple", 15);
-    Item CATALOG_ITEM_3("Watermelon", 18);
-    Item CATALOG_ITEM_4("Grape", 2);
-    Item CATALOG_ITEM_5("Strawberry", 3);
-    Item CATALOG_ITEM_6("Raspberry", 4);
+    Item CATALOG_ITEM_1("Apple", 12, 7);
+    Item CATALOG_ITEM_2("Pineapple", 28, 15);
+    Item CATALOG_ITEM_3("Watermelon", 34, 18);
+    Item CATALOG_ITEM_4("Grape", 7, 2);
+    Item CATALOG_ITEM_5("Strawberry", 5, 3);
+    Item CATALOG_ITEM_6("Raspberry", 5, 4);
 
     vector<Item> itemCatalog{ CATALOG_ITEM_1, CATALOG_ITEM_2, CATALOG_ITEM_3, 
         CATALOG_ITEM_4, CATALOG_ITEM_5,CATALOG_ITEM_6 };
@@ -42,19 +41,24 @@ int main()
 				//Switch that will call the right function depending of user entry
 				switch (userEntryChoice)
 				{
-				case 1:
+				case 1: //Sell inventory
 				{
+					myUiManager.PrintSellInventoryMenu(myWarehouse.itemInventory);
+					myUiManager.AskSellerQuantity(myWarehouse.itemInventory, 1);
 				}
 				break;
-				case 2:
+				case 2: //Buy inventory
 				{
+					myUiManager.PrintCatalogList(itemCatalog);
+					myUiManager.AskBuyerQuantity(itemCatalog, 2);
 				}
 				break;
-				case 3:
+				case 3: //Display data
 				{
+
 				}
 				break;
-				case 4:
+				case 4: //Pay employees
 				{
 				}
 				break;
@@ -82,38 +86,6 @@ int main()
 			cout << "Error!";
 		}
 	}
-    /*
-    
-    int nbrBananas = 0;
-
-    cout << "Please select the number of bananas you want to buy: ";
-
-    nbrBananas >> myErrorManager.IntInputValidator(cin);
-
-    cout << "\nYou bought " << nbrBananas << " bananas.\n";
-
-    system("Pause");
-
-    for (int i = 0; i < 8; i++)
-    {
-        myWarehouse.Add_To_Inventory(myItem, 1);
-        cout << myItem.Get_Amount_Bought();
-        system("pause");
-    }
-
-    cout << "\tAn amount of " << myItem.Get_Amount_Bought() << " " << myItem.Get_Name() 
-        << "s were bought at the costs of " << myItem.Get_Cost() << "$ each.\n";
-    system("pause");
-
-    cout << "\tSize of vector is: " << myWarehouse.itemInventory.size();
-
-    system("pause");
-
-    for (int i = 0; i < myWarehouse.itemInventory.size(); i++)
-    {
-        cout << "\t" << myWarehouse.itemInventory[i].Get_Name() << "\n";
-    }
-    */
 
     system("pause");
 }

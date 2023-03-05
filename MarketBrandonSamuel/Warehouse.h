@@ -1,8 +1,6 @@
 #pragma once
 #include "Catalog.h"
 
-using namespace std;
-
 class Warehouse
 {
 	//Declare variable to count items bought and sold

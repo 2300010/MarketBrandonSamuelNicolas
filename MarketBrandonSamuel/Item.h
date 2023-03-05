@@ -8,6 +8,7 @@ class Item
 {
 	//Declare variables
 	string name;
+	int price;
 	int cost;
 	int totalAmountBought = 0;
 	int totalAmountSold = 0;
@@ -15,15 +16,19 @@ class Item
 public:
 	
 	//Declare constructor
-	Item(string name, int cost)
+	Item(string name, int price, int cost)
 	{
 		this->name = name;
+		this->price = price;
 		this->cost = cost;
 	}
 
 	//Declare Getter-Setter signatures
 	string Get_Name();
 	void Set_Name(string name);
+
+	int Get_Price();
+	void Set_Price(int price);
 
 	int Get_Cost();
 	void Set_Cost(int cost);
