@@ -1,7 +1,6 @@
 #pragma once
 #include "Item.h"
-#include "vector"
-#include "Warehouse.h"
+#include <vector>
 
 class Catalog 
 {

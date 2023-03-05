@@ -1,7 +1,7 @@
 #include "ErrorManager.h"
 
 //Declare instance of OutputManager
-OutputManager outputManager;
+UiManager myUiManager;
 
 //Function to verify if the input is a double
 double ErrorManager::DoubleInputValidator(istream& stream)
@@ -17,7 +17,7 @@ double ErrorManager::DoubleInputValidator(istream& stream)
 			if (stream.fail() || userInput < 0)
 			{
 				//Reset state and content of cin
-				outputManager.Error(stream, "Please enter a positive value: ");
+				myUiManager.Error(stream, "Please enter a positive value: ");
 			}
 			else
 			{
@@ -48,7 +48,7 @@ int ErrorManager::IntInputValidator(istream& stream)
 			if (stream.fail() || userInput < 0)
 			{
 				//Reset state and content of cin
-				outputManager.Error(stream, "Please enter a positive value: ");
+				myUiManager.Error(stream, "Please enter a positive value: ");
 			}
 			else
 			{

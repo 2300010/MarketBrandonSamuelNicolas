@@ -130,7 +130,7 @@
   <ItemGroup>
     <ClCompile Include="Catalog.cpp" />
     <ClCompile Include="ErrorManager.cpp" />
-    <ClCompile Include="OutputManager.cpp" />
+    <ClCompile Include="UiManager.cpp" />
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="MarketBrandonSamuelNicolas.cpp" />
@@ -138,7 +138,7 @@
   <ItemGroup>
     <ClInclude Include="Catalog.h" />
     <ClInclude Include="ErrorManager.h" />
-    <ClInclude Include="OutputManager.h" />
+    <ClInclude Include="UiManager.h" />
     <ClInclude Include="Warehouse.h" />
     <ClInclude Include="Item.h" />
   </ItemGroup>

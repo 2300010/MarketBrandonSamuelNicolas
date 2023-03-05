@@ -1,5 +1,5 @@
 #pragma once
-#include "OutputManager.h"
+#include "UiManager.h"
 
 class ErrorManager
 {

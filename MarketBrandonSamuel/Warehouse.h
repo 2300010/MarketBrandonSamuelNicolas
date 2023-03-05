@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include "Item.h"
 #include "Catalog.h"
 
 using namespace std;

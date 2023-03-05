@@ -1,15 +1,13 @@
 #include <iostream>
 #include "Warehouse.h"
 #include "ErrorManager.h"
-#include "OutputManager.h"
+#include "UiManager.h"
 
 int main()
 {
     Warehouse myWarehouse;
     ErrorManager myErrorManager;
-
-    Item myItem("Banana", 30);
-
+	UiManager myUiManager;
 
     // Hard coding 6 different catalog items and adding them to Warehouse
     Item CATALOG_ITEM_1("Apple", 7);
@@ -18,37 +16,27 @@ int main()
     Item CATALOG_ITEM_4("Grape", 2);
     Item CATALOG_ITEM_5("Strawberry", 3);
     Item CATALOG_ITEM_6("Raspberry", 4);
-    
+
     vector<Item> itemCatalog{ CATALOG_ITEM_1, CATALOG_ITEM_2, CATALOG_ITEM_3, 
         CATALOG_ITEM_4, CATALOG_ITEM_5,CATALOG_ITEM_6 };
 
     myWarehouse.Add_Catalog(itemCatalog);
     //
-    
+
 	while (true) {
 		try
 		{
-			int userEntryChoice;
-			//Ask user to choose an option of the menu
-			cout << "            Welcome to Warehouse !         " << endl;
-			cout << "-------------------------------------------" << endl;
-			cout << "Please enter the number for the action desired : " << endl;
-			cout << "                                                 " << endl;
+			int userEntryChoice = 0;
+			myUiManager.PrintWarehouseTitle();
 
 
 			//Program loop with menu
 			do
 			{
-				//Print menu
-				cout << "1 - Sell Inventory " << endl;
-				cout << "2 - Buy  Inventory" << endl;
-				cout << "3 - Display Data" << endl;
-				cout << "4 - Pay employees" << endl;
-				cout << "To quit, enter 0 : ";
+				myUiManager.PrintWarehouseMenu();
 
 				//Read user entry
-				// 
-				// userEntryChoice = readInt();
+				userEntryChoice = myErrorManager.IntInputValidator(cin);
 
 
 				//Switch that will call the right function depending of user entry
