@@ -45,7 +45,7 @@ void UiManager::PrintWarehouseMenu()
 }
 
 //Function to print the catalog with the menu
-void UiManager::PrintCatalogList(vector<Item> productList, int listLength)
+void UiManager::PrintCatalogList(vector<Item> productList)
 {
 	//Print menu title
 	cout << "\n      Welcome to the buyer's catalog!";
@@ -55,9 +55,9 @@ void UiManager::PrintCatalogList(vector<Item> productList, int listLength)
 	cout << "\nPlease select the number of the item you want to buy in the following list:"; //OR THE NAME??
 
 	//Print every list of items in catalog
-	for (int i = 0; i < listLength; i++)
+	for (size_t ptr = 0; ptr < productList.size(); ptr++)
 	{
-		cout << "\n\t1. " << productList[i].Get_Name() << "\tPrice: " << productList[i].Get_Cost();
+		cout << "\n\t"<< ptr << "." << productList[ptr].Get_Name() << "\tPrice: " << productList[ptr].Get_Cost();
 	}
 
 	//Print the option for the user to leave

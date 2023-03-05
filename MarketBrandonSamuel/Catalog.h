@@ -7,15 +7,14 @@ class Catalog
 	vector<Item> catalogItems;
 
 public:
-
-	Catalog(vector<Item> catalogItems)
-	{
-		this->catalogItems = catalogItems;
-	}
-
-	Catalog() {}
+	
+	Catalog();
 
 	int Get_Cost(int purchaseQuantity, int selectedItemId);
+
+	vector<Item> Get_Catalog_Items();
+
+	void Init();
 
 };
 

@@ -1,9 +1,12 @@
 #pragma once
-#include "Warehouse.h"
+#include "Catalog.h"
 
 class UiManager
 {
+
+
 public:
+
 
 	//Function to clear input and print a error message
 	void Error(std::istream& stream, string message);
@@ -18,12 +21,14 @@ public:
 	void PrintWarehouseMenu();
 
 	//Function to print the catalog with the menu
-	void PrintCatalogList(vector<Item> productList, int listLength);
+	void PrintCatalogList(vector<Item> productList);
 
 	//Function to ask quantity of the product wanted
 	void AskBuyerQuantity(vector<Item> productList, int selectedItem);
 
 	//Function to display actual warehouse data
 	void DisplayActualData();
+
+
 };
 

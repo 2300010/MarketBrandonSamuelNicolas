@@ -1,7 +1,5 @@
 #include "ErrorManager.h"
 
-//Declare instance of OutputManager
-UiManager myUiManager;
 
 //Function to verify if the input is a double
 double ErrorManager::DoubleInputValidator(istream& stream)
@@ -60,6 +58,17 @@ int ErrorManager::IntInputValidator(istream& stream)
 		return userInput;
 	}
 	catch (...)
+	{
+
+	}
+}
+
+UiManager ErrorManager::GetUiManager() {
+	try
+	{
+		return myUiManager;
+	}
+	catch (const std::exception&)
 	{
 
 	}
