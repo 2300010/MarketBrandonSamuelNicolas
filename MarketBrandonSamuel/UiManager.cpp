@@ -101,25 +101,41 @@ void UiManager::AskBuyerQuantity(vector<Item> productList, int selectedItem)
 }
 
 //Function that prints sell inventory menu
-void UiManager::PrintSellInventoryMenu(vector<Item> inventoryList)
+bool UiManager::PrintSellInventoryMenu(vector<Item> inventoryList)
 {
 	try
 	{
-		//Print menu title
-		cout << "\n       Sell Inventory Application!";
-		cout << "\n-------------------------------------------";
+		bool inventoryIsEmpty = false;
 
-		//Ask user to select an item
-		cout << "\nPlease select the number of the item you want to sell in the following list:\n"; //OR THE NAME??
-
-		//Print every list of items in catalog
-		for (int i = 0; i < inventoryList.size(); i++)
+		//Verify if inventory is empty
+		if (inventoryList.size() == 0)
 		{
-			cout << "\n\t1. " << inventoryList[i].Get_Name() << "\tPrice: " << inventoryList[i].Get_Price();
+			cout << "\nError! Inventory is empty. Please buy items first.\n";
+
+			inventoryIsEmpty = true;
+		}
+		else 
+		{
+			//Print menu title
+			cout << "\n       Sell Inventory Application!";
+			cout << "\n-------------------------------------------";
+
+			//Ask user to select an item
+			cout << "\nPlease select the number of the item you want to sell in the following list:\n"; //OR THE NAME??
+
+			//Print every list of items in catalog
+			for (int i = 0; i < inventoryList.size(); i++)
+			{
+				cout << "\n\t1. " << inventoryList[i].Get_Name() << "\tPrice: " << inventoryList[i].Get_Price();
+			}
+
+			//Print the option for the user to leave
+			cout << "\n\t0. Quit the inventory: ";
+
+			inventoryIsEmpty = false;
 		}
 
-		//Print the option for the user to leave
-		cout << "\n\t0. Quit the inventory: ";
+		return inventoryIsEmpty;
 	}
 	catch (...)
 	{
@@ -142,7 +158,7 @@ void UiManager::AskSellerQuantity(vector<Item> inventoryList, int selectedItem)
 	}
 }
 
-//Function to display actual warehouse data
+//Function that displays actual warehouse data
 void UiManager::DisplayActualData()
 {
 	try
@@ -155,12 +171,26 @@ void UiManager::DisplayActualData()
 	}
 }
 
-//Function to ask minutes passed
+//Function that asks minutes passed
 void UiManager::AskMinutesPassed()
 {
 	try 
 	{
+		cout << "\nPlease enter the amount of time that's going to be paid to employees:\n";
+	}
+	catch (...)
+	{
 
+	}
+}
+
+//Function that prints information for the last payment
+void UiManager::PrintPaymentInfo(int minutesPassed, int lastPayment, int totalPayment)
+{
+	try
+	{
+		cout << "\n\tThe payment for " << minutesPassed << " minutes amounts to " << lastPayment << "$\n";
+		cout << "\tThe total of all the payments amounts to " << totalPayment << "$\n";
 	}
 	catch (...)
 	{

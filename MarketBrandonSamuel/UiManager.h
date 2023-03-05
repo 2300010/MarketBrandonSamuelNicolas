@@ -25,13 +25,10 @@ public:
 	void AskBuyerQuantity(vector<Item> productList, int selectedItem);
 
 	//Prints sell inventory menu
-	void PrintSellInventoryMenu(vector<Item> inventoryList);
+	bool PrintSellInventoryMenu(vector<Item> inventoryList);
 
 	//Asks the user how many of selected item will be sold
 	void AskSellerQuantity(vector<Item> inventoryList, int selectedItem);
-
-	//Asks the user if he wants to buy another item
-	void IsSellerDone();
 
 	//Displays actual warehouse data
 	void DisplayActualData();
@@ -39,6 +36,7 @@ public:
 	//Asks minutes for employee payment
 	void AskMinutesPassed();
 
-
+	//Prints information for the last payment
+	void PrintPaymentInfo(int minutesPassed, int lastPayment, int totalPayment);
 };
 
