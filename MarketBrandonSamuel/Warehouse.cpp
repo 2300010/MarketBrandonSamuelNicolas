@@ -105,26 +105,18 @@ void Warehouse::Sell_Inventory()
 
 }
 
+//Function to buy inventory from catalog
 void Warehouse::Buy_Inventory()
 {
-	size_t ptr;
-
-	myErrorManager.GetUiManager().PrintCatalogList(catalog.Get_Catalog_Items());
-
-	cout << "Catalog Items to Buy : " << endl;
-
-	for (size_t ptr = 0; ptr < catalog.Get_Catalog_Items().size(); ptr++) {
-		cout << " - " << ptr << " " << catalog.Get_Catalog_Items()[ptr].Get_Name() << " " << endl;
-	}
-
+	//Declare variables for item selected and quantity to buy
 	int idToBuy = 0;
 	int quantityToBuy = 0;
 
-	
-	cout << "Please select the Item you wish to buy :";
+	myErrorManager.GetUiManager().PrintCatalogList(catalog.Get_Catalog_Items());
+
 	idToBuy >> myErrorManager.IntInputValidator(cin);
 
-	cout << "Please select the quantity you wish to buy ( Enter 0 if you wish to go back to item selection) :";
+	myErrorManager.GetUiManager().AskBuyerQuantity(catalog.Get_Catalog_Items(), idToBuy);
 	quantityToBuy >> myErrorManager.IntInputValidator(cin);
 	cout << "Selected :" << quantityToBuy << endl;
 

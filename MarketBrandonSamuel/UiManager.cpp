@@ -100,6 +100,20 @@ void UiManager::AskBuyerQuantity(vector<Item> productList, int selectedItem)
 	}
 }
 
+//Function that prints information for the last order
+void UiManager::PrintOrderInfo(int totalOrderCost, int actualSpendings)
+{
+	try
+	{
+		cout << "\n\tTotal Cost : " << totalOrderCost << "$";
+		cout << "\nTotal Business Spending : " << actualSpendings << "$";
+	}
+	catch (...)
+	{
+
+	}
+}
+
 //Function that prints sell inventory menu
 bool UiManager::PrintSellInventoryMenu(vector<Item> inventoryList)
 {

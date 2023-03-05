@@ -24,6 +24,9 @@ public:
 	//Asks the quantity of the product wanted
 	void AskBuyerQuantity(vector<Item> productList, int selectedItem);
 
+	//Function that prints information for the last order
+	void PrintOrderInfo(int totalOrderCost, int actualSpendings);
+
 	//Prints sell inventory menu
 	bool PrintSellInventoryMenu(vector<Item> inventoryList);
 
