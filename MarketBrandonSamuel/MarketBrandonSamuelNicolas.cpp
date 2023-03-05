@@ -89,7 +89,6 @@ int main()
 			cout << "Error!";
 		}
 	}
->>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 
     system("pause");
 }

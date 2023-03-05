@@ -11,5 +11,5 @@
         void payEmployees();
 
         // Returns the total amount paid to employees
-        double getTotalPaid() const;
+        void getTotalPaid();
     };

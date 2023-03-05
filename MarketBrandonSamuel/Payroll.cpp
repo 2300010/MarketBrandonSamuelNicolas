@@ -7,7 +7,7 @@ void Payroll::payEmployees()
 }
 
 // Returns the total amount paid to employees
-double Payroll::getTotalPaid() const
+void Payroll::getTotalPaid()
 {
-    return;
+    
 }

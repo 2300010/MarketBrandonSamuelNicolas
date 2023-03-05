@@ -1,7 +1,5 @@
 #include "Warehouse.h"
 
-
-
  Warehouse::Warehouse(){
 	buyCount = 0;
 	soldCount = 0;
@@ -21,19 +19,6 @@ void Warehouse::Add_To_Inventory(Item newItem, int amount)
 
 		//Increment count of items bought
 		buyCount++;
-	}
-	catch (...)
-	{
-
-	}
-}
-
-//Declare method definition to add catalog to buy inventory warehouse
-void Warehouse::Add_Catalog(vector<Item> catalog)
-{
-	try
-	{
-		this->catalog = catalog;
 	}
 	catch (...)
 	{
