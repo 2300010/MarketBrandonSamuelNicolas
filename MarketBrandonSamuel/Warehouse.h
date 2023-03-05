@@ -23,6 +23,9 @@ public:
 	//Declare method signature to add item to inventory
 	void Add_To_Inventory(Item newItem, int amount);
 
+	//Declare method definition to add catalog to buy inventory warehouse
+	void Add_Catalog(vector<Item> catalog);
+
 	//Declare method signature to get items inventory and sales
 	int Get_Item_Bought(Item itemName);
 	int Get_Item_Sales(Item itemName);

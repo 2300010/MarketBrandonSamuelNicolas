@@ -28,9 +28,6 @@ void Warehouse::Add_To_Inventory(Item newItem, int amount)
 	}
 }
 
-<<<<<<< HEAD
-
-=======
 //Declare method definition to add catalog to buy inventory warehouse
 void Warehouse::Add_Catalog(vector<Item> catalog)
 {
@@ -43,7 +40,6 @@ void Warehouse::Add_Catalog(vector<Item> catalog)
 
 	}
 }
->>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 
 //Declare method signature to get items inventory and sales
 int Warehouse::Get_Item_Bought(Item itemName)

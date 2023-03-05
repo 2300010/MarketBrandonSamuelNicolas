@@ -5,10 +5,9 @@
 int main()
 {
     Warehouse myWarehouse;
-<<<<<<< HEAD
   
 	myWarehouse.Buy_Inventory();
-=======
+
     ErrorManager myErrorManager;
 	UiManager myUiManager;
 

@@ -3,17 +3,10 @@
 
 class UiManager
 {
-
-
 public:
-<<<<<<< HEAD
 
-
-	//Function to clear input and print a error message
-=======
 	//SIGNATURES
 	//Clears input and prints a error message
->>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 	void Error(std::istream& stream, string message);
 
 	//Prints selected item to the user as reminder
@@ -25,11 +18,7 @@ public:
 	//Prints options of the warehouse menu
 	void PrintWarehouseMenu();
 
-<<<<<<< HEAD
-	//Function to print the catalog with the menu
-=======
 	//Prints the catalog with the menu
->>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 	void PrintCatalogList(vector<Item> productList);
 
 	//Asks the quantity of the product wanted
