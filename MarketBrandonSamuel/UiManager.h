@@ -6,27 +6,45 @@ class UiManager
 
 
 public:
+<<<<<<< HEAD
 
 
 	//Function to clear input and print a error message
+=======
+	//SIGNATURES
+	//Clears input and prints a error message
+>>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 	void Error(std::istream& stream, string message);
 
-	//Function to print selected item to the user as reminder
+	//Prints selected item to the user as reminder
 	void RemindUsersChoice(vector<Item> productList, int selectedItem);
 
-	//Function to print warehouse menu title
+	//Prints warehouse menu title
 	void PrintWarehouseTitle();
 
-	//Function to print options of the warehouse menu
+	//Prints options of the warehouse menu
 	void PrintWarehouseMenu();
 
+<<<<<<< HEAD
 	//Function to print the catalog with the menu
+=======
+	//Prints the catalog with the menu
+>>>>>>> 6f994aad505dd2cc6244a155c821dc45e0f411d0
 	void PrintCatalogList(vector<Item> productList);
 
-	//Function to ask quantity of the product wanted
+	//Asks the quantity of the product wanted
 	void AskBuyerQuantity(vector<Item> productList, int selectedItem);
 
-	//Function to display actual warehouse data
+	//Prints sell inventory menu
+	void PrintSellInventoryMenu(vector<Item> inventoryList);
+
+	//Asks the user how many of selected item will be sold
+	void AskSellerQuantity(vector<Item> inventoryList, int selectedItem);
+
+	//Asks the user if he wants to buy another item
+	void IsSellerDone();
+
+	//Displays actual warehouse data
 	void DisplayActualData();
 
 

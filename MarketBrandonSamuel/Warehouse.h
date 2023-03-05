@@ -2,8 +2,6 @@
 #include "ErrorManager.h"
 #include <vector>
 
-using namespace std;
-
 class Warehouse
 {
 	//Declare variable to count items bought and sold

@@ -12,12 +12,34 @@ string Item::Get_Name()
 
 	}
 }
-
 void Item::Set_Name(string name)
 {
 	try
 	{
 		this->name = name;
+	}
+	catch (...)
+	{
+
+	}
+}
+
+int Item::Get_Price()
+{
+	try
+	{
+		return price;
+	}
+	catch (...)
+	{
+
+	}
+}
+void Item::Set_Price(int price) 
+{
+	try
+	{
+		this->price = price;
 	}
 	catch (...)
 	{
@@ -36,7 +58,6 @@ int Item::Get_Cost()
 
 	}
 }
-
 void Item::Set_Cost(int cost)
 {
 	try
@@ -60,7 +81,6 @@ int Item::Get_Amount_Bought()
 
 	}
 }
-
 void Item::Set_Amount_Bought(int amountBought)
 {
 	try
@@ -86,7 +106,6 @@ int Item::Get_Amount_Sold()
 
 	}
 }
-
 void Item::Set_Amount_Sold(int amountSold)
 {
 	try
