@@ -9,6 +9,8 @@ class Warehouse
 	//Declare variable to count items bought and sold
 	int buyCount;
 	int soldCount;
+	int totalCostPaid;
+	int totalSales;
 	int businessSpending;
 	Catalog catalog;
 	ErrorManager myErrorManager;
@@ -31,6 +33,12 @@ public:
 
 	int Get_Total_Items_Bought();
 	int Get_Total_Items_Sold();
+
+	void Set_Total_Cost_Paid(int costPaid);
+	int Get_Total_Cost_Paid();
+
+	void Set_Total_Sales(int sales);
+	int Get_Total_Sales();
 
 	void Add_To_Business_Spending(int spending);
 	int Get_Business_Spending();

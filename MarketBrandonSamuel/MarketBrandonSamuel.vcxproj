@@ -130,7 +130,9 @@
   <ItemGroup>
     <ClCompile Include="Catalog.cpp" />
     <ClCompile Include="ErrorManager.cpp" />
+    <ClCompile Include="InformationDisplayManager.cpp" />
     <ClCompile Include="Payroll.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
     <ClCompile Include="UiManager.cpp" />
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="Item.cpp" />
@@ -139,7 +141,9 @@
   <ItemGroup>
     <ClInclude Include="Catalog.h" />
     <ClInclude Include="ErrorManager.h" />
+    <ClInclude Include="InformationDisplayManager.h" />
     <ClInclude Include="Payroll.h" />
+    <ClInclude Include="TimeManager.h" />
     <ClInclude Include="UiManager.h" />
     <ClInclude Include="Warehouse.h" />
     <ClInclude Include="Item.h" />

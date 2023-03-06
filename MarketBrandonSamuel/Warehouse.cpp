@@ -76,6 +76,41 @@ int Warehouse::Get_Total_Items_Sold()
 }
 
 
+void Warehouse::Set_Total_Cost_Paid(int costPaid) 
+{
+	this->totalCostPaid += costPaid;
+}
+
+int Warehouse::Get_Total_Cost_Paid()
+{
+	try
+	{
+		return totalCostPaid;
+	}
+	catch (...)
+	{
+
+	}
+}
+
+void Warehouse::Set_Total_Sales(int sales)
+{
+	this->totalSales += sales;
+}
+
+int Warehouse::Get_Total_Sales()
+{
+	try
+	{
+		return totalSales;
+	}
+	catch (...)
+	{
+
+	}
+}
+
+
 // Declare method signature to get and add to Business Spending
 void Warehouse::Add_To_Business_Spending(int spending) {
 	try
@@ -122,6 +157,7 @@ void Warehouse::Buy_Inventory()
 
 	Add_To_Inventory(catalog.Get_Catalog_Items()[idToBuy], quantityToBuy);
 	Add_To_Business_Spending(catalog.Get_Cost(quantityToBuy, idToBuy));
+	Set_Total_Cost_Paid(catalog.Get_Cost(quantityToBuy, idToBuy));
 	cout << "Total Cost : " << catalog.Get_Cost(quantityToBuy, idToBuy) << endl;
 	cout << "Total Business Spending : " << Get_Business_Spending() << endl;
 

@@ -1,16 +1,16 @@
 #include "Warehouse.h"
 #include "ErrorManager.h"
 #include "UiManager.h"
+#include "InformationDisplayManager.h"
+#include "Payroll.h"
 
 int main()
 {
-    Warehouse myWarehouse;
-  
-	myWarehouse.Buy_Inventory();
-
+	Warehouse myWarehouse;
     ErrorManager myErrorManager;
 	UiManager myUiManager;
-
+	InformationDisplayManager myDisplayManager;
+	Payroll myPayroll;
 
 	while (true) {
 		try
@@ -43,12 +43,16 @@ int main()
 				break;
 				case 3: //Display data
 				{
+					myDisplayManager.DisplayChoice();
 
+					cout << endl;
 				}
 				break;
 				case 4: //Pay employees
 				{
+					myPayroll.PaymentActivation();
 
+					cout << endl;
 				}
 				break;
 				case 0:
@@ -66,7 +70,7 @@ int main()
 				break;
 				}
 
-			} while (userEntryChoice != '0');
+			} while (userEntryChoice != 0);
 
 			return 1;
 		}
