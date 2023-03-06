@@ -10,7 +10,7 @@ public:
 	
 	Catalog();
 
-	int Get_Cost(int purchaseQuantity, int selectedItemId);
+	int Get_Cost( int selectedItemId, int purchaseQuantity );
 
 	vector<Item> Get_Catalog_Items();
 

@@ -7,6 +7,7 @@ int main()
     Warehouse myWarehouse;
   
 	myWarehouse.Buy_Inventory();
+	
 
     ErrorManager myErrorManager;
 	UiManager myUiManager;
@@ -33,12 +34,12 @@ int main()
 				{
 				case 1: //Sell inventory
 				{
-					
+					myWarehouse.Sell_Inventory();
 				}
 				break;
 				case 2: //Buy inventory
 				{
-					
+					myWarehouse.Buy_Inventory();
 				}
 				break;
 				case 3: //Display data
@@ -48,7 +49,6 @@ int main()
 				break;
 				case 4: //Pay employees
 				{
-
 				}
 				break;
 				case 0:

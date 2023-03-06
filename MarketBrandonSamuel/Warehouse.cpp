@@ -102,29 +102,119 @@ int Warehouse::Get_Business_Spending() {
 
 void Warehouse::Sell_Inventory()
 {
+	//Print menu title
+	cout << "\n       Sell Inventory Application!";
+	cout << "\n-------------------------------------------";
 
+	vector<vector<int>> sell_list;
+	int idToSell = 0;
+	int quantityToSell = 0;
+	int itr = 0;
+	int soldPrice = 0;
+	vector<int> v1;
+	do
+	{
+
+		if (!myErrorManager.GetUiManager().PrintSellInventoryMenu(itemInventory))
+		{
+			
+			// Select id of wanted item
+			idToSell = myErrorManager.IntInputValidator(cin);
+			// verify it is not 0, quit if so
+			if (idToSell == 0) {
+				break;
+			}
+			//items are printed starting from 1 so we do -1 for the list position
+			idToSell -= 1;
+			
+
+			myErrorManager.GetUiManager().AskSellerQuantity(itemInventory, idToSell);
+
+			quantityToSell = myErrorManager.IntInputValidator(cin);
+			cout << "Selected :" << quantityToSell << endl;
+			
+			if (quantityToSell > itemInventory.at(idToSell).Get_In_Inventory()) {
+				cout << "Error !! Please Select a quantity that is lower or equal to the amount in inventory" << endl;
+				continue;
+			}
+			if (idToSell > itemInventory.size()) {
+				cout << "Error !! Please Select Valid Id" << endl;
+				continue;
+			}
+
+			
+		}
+		if (quantityToSell == 0) {
+			continue;
+		}
+		v1.push_back(idToSell);
+		v1.push_back(quantityToSell);
+		sell_list.push_back(v1);
+
+	} while (true);
+	cout << "Enter how much all the items are sold for :";
+	soldPrice = myErrorManager.IntInputValidator(cin);
+
+	for (int i = 0; i < sell_list.size(); i++) {
+		//update item amount in inventory
+		itemInventory[sell_list[i].at(0)].Set_In_Inventory(itemInventory[sell_list[i].at(0)].Get_In_Inventory() - quantityToSell);
+		//update item total amount sold
+		itemInventory[sell_list[i].at(0)].Set_Amount_Sold(sell_list[i].at(1));
+		//update warehouse total sold count
+		soldCount += quantityToSell;
+		//update business profit 
+		businessProfit += soldPrice;
+	};
+	
+	cout << endl << endl << endl;
 }
 
 //Function to buy inventory from catalog
 void Warehouse::Buy_Inventory()
 {
-	//Declare variables for item selected and quantity to buy
+	myErrorManager.GetUiManager().PrintCatalogList(catalog.Get_Catalog_Items());
+
 	int idToBuy = 0;
 	int quantityToBuy = 0;
 
-	myErrorManager.GetUiManager().PrintCatalogList(catalog.Get_Catalog_Items());
+	do
+	{
+		// Select id of wanted item, items are printed starting from 1 so we do -1 for the list position
+		idToBuy = myErrorManager.IntInputValidator(cin);
+		if (idToBuy == 0) {
+			return;
+		}
+		idToBuy = idToBuy-1;
 
-	idToBuy >> myErrorManager.IntInputValidator(cin);
+		myErrorManager.GetUiManager().AskBuyerQuantity(catalog.Get_Catalog_Items(), idToBuy);
 
-	myErrorManager.GetUiManager().AskBuyerQuantity(catalog.Get_Catalog_Items(), idToBuy);
-	quantityToBuy >> myErrorManager.IntInputValidator(cin);
-	cout << "Selected :" << quantityToBuy << endl;
+		quantityToBuy = myErrorManager.IntInputValidator(cin);
+		cout << "Selected :" << quantityToBuy << endl;
 
-	Add_To_Inventory(catalog.Get_Catalog_Items()[idToBuy], quantityToBuy);
+		
+		if (quantityToBuy == 0) {
+			continue;
+		}
+		else {
+			break;
+		}
+
+	} while (true);
+	// Create temporary item copy of catalog item and set amount bought for warehouse inventory tracking
+	Item boughtItem = catalog.Get_Catalog_Items()[idToBuy];
+	boughtItem.Set_In_Inventory(quantityToBuy);
+
+	//add to warehouse inventory and track total quantity of items
+	Add_To_Inventory(boughtItem, quantityToBuy);
 	Add_To_Business_Spending(catalog.Get_Cost(quantityToBuy, idToBuy));
+
+	//update warehouse bought count
+	buyCount += quantityToBuy;
+
+	//print total cost and total spending
 	cout << "Total Cost : " << catalog.Get_Cost(quantityToBuy, idToBuy) << endl;
 	cout << "Total Business Spending : " << Get_Business_Spending() << endl;
-
+	cout << endl << endl;
 }
 
 

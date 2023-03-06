@@ -10,6 +10,7 @@ class Warehouse
 	int buyCount;
 	int soldCount;
 	int businessSpending;
+	int businessProfit;
 	Catalog catalog;
 	ErrorManager myErrorManager;
 	
