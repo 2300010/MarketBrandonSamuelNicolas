@@ -71,9 +71,9 @@ void UiManager::PrintCatalogList(vector<Item> productList)
 		cout << "\nPlease select the number of the item you want to buy in the following list:\n"; //OR THE NAME??
 
 		//Print every list of items in catalog
-		for (int i = 0; i < productList.size(); i++)
+		for (int i = 1; i <= productList.size(); i++)
 		{
-			cout << "\n\t" << i + 1 << ". " << productList[i].Get_Name() << "\tCost: " << productList[i].Get_Cost() << DOLLAR_SIGN;
+			cout << "\n\t"<< i <<". " << productList[i-1].Get_Name() << "\tCost: " << productList[i-1].Get_Cost();
 		}
 
 		//Print the option for the user to leave
@@ -130,21 +130,19 @@ bool UiManager::PrintSellInventoryMenu(vector<Item> inventoryList)
 		}
 		else 
 		{
-			//Print menu title
-			cout << "\n       Sell Inventory Application!";
-			cout << "\n-------------------------------------------";
+			
 
 			//Ask user to select an item
 			cout << "\nPlease select the number of the item you want to sell in the following list:\n"; //OR THE NAME??
 
 			//Print every list of items in catalog
-			for (int i = 0; i < inventoryList.size(); i++)
+			for (int i = 1; i <= inventoryList.size(); i++)
 			{
-				cout << "\n\t1. " << inventoryList[i].Get_Name() << "\tPrice: " << inventoryList[i].Get_Price() << DOLLAR_SIGN;
+				cout << "\n\t<< "<< i <<". " << inventoryList[i-1].Get_Name() << "\tPrice: " << inventoryList[i-1].Get_Price() << "\tInventory Quantity: " << inventoryList[i - 1].Get_In_Inventory();
 			}
 
 			//Print the option for the user to leave
-			cout << "\n\t0. Quit the inventory: ";
+			cout << "\n\t0. If you finished selling: ";
 
 			inventoryIsEmpty = false;
 		}

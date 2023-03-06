@@ -117,3 +117,26 @@ void Item::Set_Amount_Sold(int amountSold)
 
 	}
 }
+
+int Item::Get_In_Inventory()
+{
+	try
+	{
+		return inInventory;
+	}
+	catch (...)
+	{
+
+	}
+}
+void Item::Set_In_Inventory(int quantity)
+{
+	try
+	{
+		inInventory = quantity;
+	}
+	catch (...)
+	{
+
+	}
+}

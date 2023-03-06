@@ -12,6 +12,7 @@ class Warehouse
 	int totalCostPaid;
 	int totalSales;
 	int businessSpending;
+	int businessProfit;
 	Catalog catalog;
 	ErrorManager myErrorManager;
 	

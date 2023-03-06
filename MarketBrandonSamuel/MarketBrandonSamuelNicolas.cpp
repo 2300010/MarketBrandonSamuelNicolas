@@ -33,12 +33,12 @@ int main()
 				{
 				case 1: //Sell inventory
 				{
-					
+					myWarehouse.Sell_Inventory();
 				}
 				break;
 				case 2: //Buy inventory
 				{
-					
+					myWarehouse.Buy_Inventory();
 				}
 				break;
 				case 3: //Display data

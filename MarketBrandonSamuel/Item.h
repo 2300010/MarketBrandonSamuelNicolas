@@ -12,6 +12,7 @@ class Item
 	int cost;
 	int totalAmountBought = 0;
 	int totalAmountSold = 0;
+	int inInventory = 0;
 
 public:
 	
@@ -38,6 +39,9 @@ public:
 
 	int Get_Amount_Sold();
 	void Set_Amount_Sold(int amountSold);
+
+	int Get_In_Inventory();
+	void Set_In_Inventory(int quantity);
 
 };
 
