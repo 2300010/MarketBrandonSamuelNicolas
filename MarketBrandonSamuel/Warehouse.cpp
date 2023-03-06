@@ -179,6 +179,11 @@ void Warehouse::Sell_Inventory()
 
 			
 		}
+		else
+		{
+			return;
+		}
+
 		if (quantityToSell == 0) {
 			continue;
 		}

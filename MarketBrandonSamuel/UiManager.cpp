@@ -73,7 +73,7 @@ void UiManager::PrintCatalogList(vector<Item> productList)
 		//Print every list of items in catalog
 		for (int i = 1; i <= productList.size(); i++)
 		{
-			cout << "\n\t"<< i <<". " << productList[i-1].Get_Name() << "\tCost: " << productList[i-1].Get_Cost();
+			cout << "\n\t"<< i <<". " << productList[i-1].Get_Name() << "\tCost: " << productList[i-1].Get_Cost() << DOLLAR_SIGN;
 		}
 
 		//Print the option for the user to leave
@@ -92,7 +92,7 @@ void UiManager::AskBuyerQuantity(vector<Item> productList, int selectedItem)
 	{
 		//Ask user to select quantity to buy with price as a reminder
 		cout << "\nThe selected product costs " << productList[selectedItem].Get_Cost()
-			<< DOLLAR_SIGN << ". Please enter the quantity you want to buy: ";
+			<< DOLLAR_SIGN << ". Please enter the quantity you want to buy ( 0 to choose another item to buy ): ";
 	}
 	catch (...)
 	{
@@ -138,7 +138,8 @@ bool UiManager::PrintSellInventoryMenu(vector<Item> inventoryList)
 			//Print every list of items in catalog
 			for (int i = 1; i <= inventoryList.size(); i++)
 			{
-				cout << "\n\t<< "<< i <<". " << inventoryList[i-1].Get_Name() << "\tPrice: " << inventoryList[i-1].Get_Price() << "\tInventory Quantity: " << inventoryList[i - 1].Get_In_Inventory();
+				cout << "\n\t<< "<< i <<". " << inventoryList[i-1].Get_Name() << "\tPrice: " << inventoryList[i-1].Get_Price() 
+					<< DOLLAR_SIGN << "\tInventory Quantity: " << inventoryList[i - 1].Get_In_Inventory();
 			}
 
 			//Print the option for the user to leave
@@ -162,7 +163,7 @@ void UiManager::AskSellerQuantity(vector<Item> inventoryList, int selectedItem)
 	{
 		//Ask user to select quantity to buy with price as a reminder
 		cout << "\nThe selected product's price is " << inventoryList[selectedItem].Get_Price()
-			<< DOLLAR_SIGN << ". Please enter the quantity you want to sell: ";
+			<< DOLLAR_SIGN << ". Please enter the quantity you want to sell ( 0 to choose another item to sell ): ";
 	}
 	catch (...)
 	{
